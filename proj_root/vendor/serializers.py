@@ -1,6 +1,6 @@
 """ Serializer class for the Models """
 from rest_framework import serializers
-from .models import *
+from .models import Vendor, PurchaseOrder, HistoricalPerformance
 
 class VendorModelSerializer(serializers.ModelSerializer):
     """ Vendor Model Serializer """

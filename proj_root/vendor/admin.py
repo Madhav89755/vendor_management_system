@@ -1,6 +1,6 @@
 """ Admin classes for the admin panel """
 from django.contrib import admin
-from .models import *
+from .models import Vendor, PurchaseOrder, HistoricalPerformance
 # Register your models here.
 
 @admin.register(Vendor)
