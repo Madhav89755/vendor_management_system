@@ -1,3 +1,4 @@
+""" Admin classes for the admin panel """
 from django.contrib import admin
 from .models import *
 # Register your models here.
@@ -10,7 +11,7 @@ class VendorModelAdmin(admin.ModelAdmin):
                   "created_on"]
     search_fields=["id", "vendor_code",
                   "name"]
-    readonly_fields = ['id', 'created_on', 'updated_on']
+    readonly_fields = ['created_on', 'updated_on']
 
 @admin.register(PurchaseOrder)
 class PurchaseOrderModelAdmin(admin.ModelAdmin):
@@ -20,7 +21,7 @@ class PurchaseOrderModelAdmin(admin.ModelAdmin):
                   "created_on"]
     search_fields=["po_number", "vendor"]
     list_filter=["status"]
-    readonly_fields = ["po_number", 'created_on', 'updated_on']
+    readonly_fields = ['created_on', 'updated_on']
 
 @admin.register(HistoricalPerformance)
 class HistoricalPerformanceModelAdmin(admin.ModelAdmin):
@@ -29,4 +30,4 @@ class HistoricalPerformanceModelAdmin(admin.ModelAdmin):
                   "date", "on_time_delivery_rate",
                   "created_on"]
     search_fields=["id", "vendor"]
-    readonly_fields = ["id", 'created_on', 'updated_on']
+    readonly_fields = ['created_on', 'updated_on']
